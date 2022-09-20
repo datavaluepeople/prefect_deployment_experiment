@@ -6,8 +6,13 @@ Based on the [issue](https://github.com/anna-geller/prefect-docker-deployment/is
 ## Requirements and installation
 - docker engine
 - prefect installation
+- (optional) `venv`
 
-### Example installation
+### Installation
+Clone this repo.
+
+### Example environment provision
+Using `venv`:
 ```
 python -m venv .venv
 source .venv/bin/activate
@@ -15,7 +20,7 @@ pip install -r requirements.txt
 ```
 
 ## How to run docker hello world example
-For all new terminals run `source .venv/bin/activate`
+For all new terminals run `source .venv/bin/activate` if using `venv`
 - In a new terminal start the orion server `prefect orion start`
 - In a new terminal start the agent: `prefect agent start -q "docker_experiments"`
 - In a new terminal apply the deployment: `python docker_hello_world.py`
@@ -38,7 +43,7 @@ cd ../prefect_deployment_experiment/
 ```
 
 It is then possible to run the healthcheck flow from the prefect-docker-deployment repo with the commands:
-- For all new terminals run `source .venv/bin/activate`
+- For all new terminals run `source .venv/bin/activate` if using `venv`
 - In a new terminal start the orion server `prefect orion start`
 - In a new terminal start the agent: `prefect agent start -q "docker_experiments"`
 - In a new terminal apply the deployment: `python deploy_healthcheck_from_different_repo.py`
